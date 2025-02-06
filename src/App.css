@@ -350,7 +350,7 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     gap: 74px;
-    height: 100vh;
+    height: 95vh;
     margin: 32px;
     > img {
       margin-top: auto;
