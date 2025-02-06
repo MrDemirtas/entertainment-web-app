@@ -41,7 +41,6 @@ function CardTrend({ title, image, release_date, type, age_rating, trailer }) {
   const { bookmarks, setBookmarks } = useContext(Bookmarks);
 
   function handleBookmarks() {
-    console.log(bookmarks.includes(title));
     if (bookmarks.includes(title)) {
       setBookmarks(bookmarks.filter((item) => item !== title));
     } else {
@@ -50,21 +49,23 @@ function CardTrend({ title, image, release_date, type, age_rating, trailer }) {
   }
 
   return (
-    <div className="card-trend" onClick={() => window.open(trailer, "_blank ")}>
+    <div className="card-container">
       <button onClick={handleBookmarks}>{bookmarks.find((item) => item === title) ? <BookmarkAddedSvg /> : <BookmarkSvg />}</button>
-      <img src={image} />
-      <div className="card-text">
-        <div className="card-data">
-          <span>{new Date(release_date).getFullYear()}</span>
-          <DotSvg />
-          <span>
-            {type === "movie" ? <MovieSvg /> : <SeriesSvg />}
-            {type}
-          </span>
-          <DotSvg />
-          <span>{age_rating}</span>
+      <div className="card-trend" onClick={() => window.open(trailer, "_blank ")}>
+        <img src={image} />
+        <div className="card-text">
+          <div className="card-data">
+            <span>{new Date(release_date).getFullYear()}</span>
+            <DotSvg />
+            <span>
+              {type === "movie" ? <MovieSvg /> : <SeriesSvg />}
+              {type}
+            </span>
+            <DotSvg />
+            <span>{age_rating}</span>
+          </div>
+          <h3>{title}</h3>
         </div>
-        <h3>{title}</h3>
       </div>
     </div>
   );

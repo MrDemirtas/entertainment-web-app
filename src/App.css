@@ -111,7 +111,7 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   min-width: 240px;
   height: 140px;
   cursor: pointer;
@@ -131,18 +131,28 @@ main {
     z-index: -1;
     opacity: 0.8;
   }
+}
+
+.card-container{
+  position: relative;
+  width: 100%;
   button {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: auto;
-    margin-right: 8px;
-    margin-top: 8px;
+    right: 8px;
+    top: 8px;
     border: none;
     border-radius: 50%;
     background-color: rgba(16, 20, 30, 0.75);
     width: 32px;
     height: 32px;
+    z-index: 999;
+    svg{
+      fill: #fff;
+    }
   }
 }
 
@@ -187,6 +197,7 @@ main {
 }
 
 .card {
+  position: relative;
   height: 154px;
   display: flex;
   flex-direction: column;
@@ -212,19 +223,6 @@ main {
       border-radius: 8px;
       z-index: -1;
       opacity: 0.8;
-    }
-    button {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      right: 8px;
-      top: 8px;
-      border: none;
-      border-radius: 50%;
-      background-color: rgba(16, 20, 30, 0.75);
-      width: 32px;
-      height: 32px;
     }
   }
 
