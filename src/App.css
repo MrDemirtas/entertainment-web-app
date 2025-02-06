@@ -20,7 +20,7 @@
   background-color: #fc4747;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
@@ -58,6 +58,13 @@ nav {
         font-weight: 500;
         svg {
           width: 16px;
+        }
+      }
+      &:hover {
+        a {
+          svg {
+            fill: #fc4747;
+          }
         }
       }
       &.active {
@@ -107,6 +114,13 @@ main {
   justify-content: space-between;
   min-width: 240px;
   height: 140px;
+  cursor: pointer;
+  &:hover {
+    background: url("/svg/play.svg") center center no-repeat;
+    img {
+      opacity: 0.5;
+    }
+  }
   img {
     position: absolute;
     width: 100%;
@@ -177,6 +191,15 @@ main {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  cursor: pointer;
+  &:hover {
+    figure {
+      background: url("/svg/play.svg") center center no-repeat;
+      img {
+        opacity: 0.5;
+      }
+    }
+  }
   figure {
     height: 110px;
     position: relative;

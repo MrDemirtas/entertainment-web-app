@@ -37,7 +37,7 @@ function DashboardMain({ data }) {
   );
 }
 
-function CardTrend({ title, image, release_date, type, age_rating }) {
+function CardTrend({ title, image, release_date, type, age_rating, trailer }) {
   const { bookmarks, setBookmarks } = useContext(Bookmarks);
 
   function handleBookmarks() {
@@ -50,7 +50,7 @@ function CardTrend({ title, image, release_date, type, age_rating }) {
   }
 
   return (
-    <div className="card-trend">
+    <div className="card-trend" onClick={() => window.open(trailer, "_blank ")}>
       <button onClick={handleBookmarks}>{bookmarks.find((item) => item === title) ? <BookmarkAddedSvg /> : <BookmarkSvg />}</button>
       <img src={image} />
       <div className="card-text">

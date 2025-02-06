@@ -3,7 +3,7 @@ import { BookmarkAddedSvg, BookmarkSvg, DotSvg, MovieSvg, SeriesSvg } from "../S
 import { Bookmarks } from "../App";
 import { useContext } from "react";
 
-export default function Card({ title, image, release_date, type, age_rating }) {
+export default function Card({ title, image, release_date, type, age_rating, trailer }) {
     const { bookmarks, setBookmarks } = useContext(Bookmarks);
   
     function handleBookmarks() {
@@ -15,7 +15,7 @@ export default function Card({ title, image, release_date, type, age_rating }) {
       }
     }
   return (
-    <div className="card">
+    <div className="card" onClick={() => window.open(trailer, "_blank")}>
       <figure>
         <button onClick={handleBookmarks}>
           {bookmarks.find((item) => item === title) ? <BookmarkAddedSvg /> : <BookmarkSvg />}
