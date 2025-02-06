@@ -1,6 +1,6 @@
 import Bookmarks from "./components/Bookmarks";
 import Dashboard from "./components/Dashboard";
-import Movies from "./components/Moveise";
+import Movies from "./components/Movies";
 import Series from "./components/Series";
 
 const routers = [

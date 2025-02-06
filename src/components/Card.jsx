@@ -7,7 +7,6 @@ export default function Card({ title, image, release_date, type, age_rating, tra
   const { bookmarks, setBookmarks } = useContext(Bookmarks);
 
   function handleBookmarks() {
-    console.log(bookmarks.includes(title));
     if (bookmarks.includes(title)) {
       setBookmarks(bookmarks.filter((item) => item !== title));
     } else {
